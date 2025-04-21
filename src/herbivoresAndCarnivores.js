@@ -38,6 +38,10 @@ class Carnivore extends Animal {
     if (target instanceof Herbivore && !target.hidden) {
       target.takeDamage(50);
     }
+
+    if (this.health <= 0) {
+      this.die();
+    }
   }
 }
 
